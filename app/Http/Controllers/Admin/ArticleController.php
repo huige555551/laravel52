@@ -53,12 +53,20 @@ class ArticleController extends Controller
         }
     }
 
-    public function edit( $id ){
-//        var_dump(Article::find($id));die;
+    /**
+     * @param $id
+     * @return mixed
+     */
+    public function edit($id ){
         return view('admin/article/edit')->withArticle(Article::find($id));
     }
 
-    public function update( Request $request, $id )
+    /**
+     * @param Request $request
+     * @param $id
+     * @return $this|\Illuminate\Http\RedirectResponse|\Illuminate\Routing\Redirector
+     */
+    public function update(Request $request, $id )
     {
         $this->validate($request, [
             'title' => 'required|unique:articles,title,'.$id.'|max:255',
@@ -76,7 +84,11 @@ class ArticleController extends Controller
         }
     }
 
-    public function destroy( $id )
+    /**
+     * @param $id
+     * @return $this
+     */
+    public function destroy($id )
     {
         Article::find($id)->delete();
         return redirect()->back()->withInput()->withErrors('删除成功!');
