@@ -14,7 +14,7 @@
 
                         <div>&nbsp;</div>
 
-                        <a href="{{ url('admin/article') }}" class="btn btn-lg btn-warning col-xs-12">管理评论</a>
+                        <a href="{{ url('admin/comment') }}" class="btn btn-lg btn-warning col-xs-12">管理评论</a>
 
                     </div>
                 </div>

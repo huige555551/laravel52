@@ -58,7 +58,8 @@ class ArticleController extends Controller
      * @return mixed
      */
     public function edit($id ){
-        return view('admin/article/edit')->withArticle(Article::find($id));
+//        return view('admin/article/edit')->withArticle(Article::find($id));
+
     }
 
     /**
