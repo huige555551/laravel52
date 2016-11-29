@@ -21,7 +21,7 @@
                                 <h4>{{ $article->title }}</h4>
 
                                 <div class="content">
-                                    <p>
+                                    <p id="article-content">
                                         {{ $article->body }}
                                     </p>
                                 </div>

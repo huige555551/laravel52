@@ -13,13 +13,13 @@
 </head>
 
 <div id="title" style="text-align: center;">
-    <h1>Learn Laravel 52</h1>
-    <div style="padding: 5px; font-size: 16px;">Learn Laravel 52</div>
+    <h1>Laravel Simple Blog</h1>
+    <div style="padding: 5px; font-size: 16px;">By susucool from <a href="http://www.golaravel.com/post/2016-ban-laravel-xi-lie-ru-men-jiao-cheng-yi/" target="_blank">2016 版 Laravel 系列入门教程</a></div>
     <hr>
     <div id="content">
         <ul>
             @foreach( $articles as $article )
-                <li style="margin: 50px 0;">
+                <li style="margin: 50px 0;text-align: left;">
                     <div class="title">
                         <a href="{{ url('article/'.$article->id) }}">
                             <h4>{{ $article->title  }}</h4>
